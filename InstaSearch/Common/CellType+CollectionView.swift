@@ -40,7 +40,7 @@ extension UICollectionView {
 extension UICollectionView {
 	func registerReusableCell<T: UICollectionViewCell>(_: T.Type) where T: Reusable {
 		if let nib = T.nib {
-			self.registeri(nib, forCellWithReuseIdentifier: T.reuseIdentifier)
+			self.register(nib, forCellWithReuseIdentifier: T.reuseIdentifier)
 		} else {
 			self.register(T.self, forCellWithReuseIdentifier: T.reuseIdentifier)
 		}
