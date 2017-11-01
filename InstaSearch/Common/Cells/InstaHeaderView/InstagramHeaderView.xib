@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InstagramHeaderView" id="p1f-E4-aJa" customClass="InstagramHeaderView" customModule="InstaSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="495" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tcK-ZM-pSR" customClass="CircleImageView" customModule="InstaSearch" customModuleProvider="target">
+                    <rect key="frame" x="202" y="37" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="N1t-Lq-wyz"/>
+                        <constraint firstAttribute="height" constant="90" id="u6D-Xt-gda"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tLk-Wm-jhB">
+                    <rect key="frame" x="125" y="135" width="245" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.97925666889999996" green="1" blue="0.96638196990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="tLk-Wm-jhB" firstAttribute="leading" secondItem="1c8-v9-ETm" secondAttribute="leading" constant="125" id="Dnp-FN-Qq2"/>
+                <constraint firstItem="tLk-Wm-jhB" firstAttribute="centerX" secondItem="tcK-ZM-pSR" secondAttribute="centerX" id="E6n-dr-Hdf"/>
+                <constraint firstItem="tcK-ZM-pSR" firstAttribute="centerX" secondItem="1c8-v9-ETm" secondAttribute="centerX" id="Stw-Cb-t4d"/>
+                <constraint firstItem="tcK-ZM-pSR" firstAttribute="centerY" secondItem="1c8-v9-ETm" secondAttribute="centerY" id="dGN-Uc-coZ"/>
+                <constraint firstItem="1c8-v9-ETm" firstAttribute="bottom" secondItem="tLk-Wm-jhB" secondAttribute="bottom" constant="6" id="rjk-G3-g3g"/>
+                <constraint firstItem="tLk-Wm-jhB" firstAttribute="top" secondItem="tcK-ZM-pSR" secondAttribute="bottom" constant="8" symbolic="YES" id="xwl-Bd-Svp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="1c8-v9-ETm"/>
+            <connections>
+                <outlet property="circleImageView" destination="tcK-ZM-pSR" id="kEV-zc-BUy"/>
+                <outlet property="usernameLabel" destination="tLk-Wm-jhB" id="rY9-ak-803"/>
+            </connections>
+            <point key="canvasLocation" x="169.5" y="44.5"/>
+        </collectionReusableView>
+    </objects>
+</document>
